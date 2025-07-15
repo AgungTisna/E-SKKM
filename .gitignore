@@ -1,0 +1,7 @@
+/vendor/
+.env
+*.log
+*.sqlite
+node_modules/
+*.zip
+.DS_Store
