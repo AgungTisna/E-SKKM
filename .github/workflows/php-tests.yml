@@ -15,8 +15,14 @@ jobs:
         with:
           php-version: '8.2'
 
+      - name: Install Composer
+        run: curl -sS https://getcomposer.org/installer | php
+
       - name: Install dependencies
-        run: composer install
+        run: php composer.phar install
+
+      - name: List available tests
+        run: ./vendor/bin/phpunit --list-tests
 
       - name: Run tests
         run: ./vendor/bin/phpunit --testdox
